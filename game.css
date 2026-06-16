@@ -1,0 +1,165 @@
+/* Base Styles */
+html {
+  font-size: 35px;
+  background: #98BCF4;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+/* Score Display */
+.score {
+  background: blue;
+  padding: 0 48px;
+  line-height: 1;
+  border-radius: 16px;
+  color: #fff;
+  margin-left: 15px;
+}
+
+/* Game Container */
+.game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Individual Holes */
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Dirt Background for Holes */
+.hole::after {
+  display: block;
+  background: url('dirt.png') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 90px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+/* Mole Appearance */
+.mole {
+  background: url('mole.png') bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+/* Mole Visible State */
+.hole.up .mole {
+  top: 0;
+}
+
+/* Start and Quit Button Styling */
+button {
+  width: 175px;
+  height: 70px;
+  font-size: 35px;
+  color: #fff;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+/* Quit Button Visibility */
+#quit-button {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Winner Message */
+#winner-message {
+  font-size: 40px;
+  font-weight: bold;
+  color: green;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* Tablets and Small Desktops */
+@media (min-width: 667px) and (max-width: 1024px) {
+  h1 {
+    display: none;
+  }
+
+  .score {
+    padding: 0 12px;
+    font-size: 40px;
+    margin-left: 20px;
+  }
+
+  .hole.up .mole {
+    top: 17px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 667px) {
+  .game {
+    width: 667px;
+    height: 300px;
+  }
+
+  .score {
+    width: 35px;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: blue;
+    color: #fff;
+  }
+
+  button {
+    width: 75px;
+    height: 40px;
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .hole::after {
+    max-width: 70%;
+    height: 60px;
+  }
+
+  .mole {
+    background-size: 60%;
+    max-width: 70%;
+    height: 70%;
+  }
+
+  .hole.up .mole {
+    top: 50px;
+  }
+}

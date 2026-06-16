@@ -1,0 +1,65 @@
+body {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 6, 132); 
+    background-image: url('snakeBack2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(246, 252, 246);
+    margin: 0;
+}
+
+canvas {
+    border: 2px solid #961616;
+    background-color: green; 
+}
+
+#gameOverMessage {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+button {
+    background-color: rgb(179, 206, 255);
+    color: black;
+    padding: 5px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 1px solid cornflowerblue;
+    margin-right: 20px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.difficulty h1{
+    text-align: center;
+}
+.difficulty{
+    margin-left: 100px;
+}
+.difficulty div{
+    margin-left: 10px;
+}
+#restartButton{
+    margin-left:100px;
+}
+#gameOverMessage {
+    margin-left: 100px;
+}
+#scoreboard{
+    margin-left: 100px;
+}
+canvas{
+    margin-left: 100px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    </div> 
+    <div class="difficulty">
+
+  
+    <h1>SNAKE GAME!</h1>
+
+    <div id="modeButtons">
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>  </div>
+
+    <div id="scoreboard" style="display: none;">
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+        <p id="level">Level: 1</p>
+    </div>
+    
+    <canvas id="snake" width="512" height="512" style="display: none;"></canvas>
+    
+    <button id="restartButton" style="display: none;" onclick="resetGame()">Restart</button>
+
+    <audio id="eatSound" src="eat.wav"></audio>
+<audio id="gameOverSound" src="gameoverSnake.wav"></audio>
+
+    <script defer src="snake.js"></script>
+</body>
+</html>

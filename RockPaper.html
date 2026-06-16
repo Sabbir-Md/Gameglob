@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="RockPaperS.css">
+</head>
+<body>
+
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="instructions">
+        <p>Choose rock, paper, or scissors to play against the computer. Try to win by choosing the option that beats the computer's choice!</p>
+    </div>
+
+    <div class="scoreboard">
+        <p id="wins">Wins: 0</p>
+        <p id="losses">Losses: 0</p>
+        <p id="draws">Draws: 0</p>
+    </div>
+
+    <div class="game-container">
+        <div class="choice-container">
+            <h2>Your Choice</h2>
+            <div id="user-choice" class="choice"></div>
+        </div>
+        <div class="choice-container">
+            <h2>Computer Choice</h2>
+            <div id="computer-choice" class="choice"></div>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <div class="button-container">
+        <button id="rock" class="choice-button">✊</button>
+        <button id="paper" class="choice-button">✋</button>
+        <button id="scissors" class="choice-button">✌</button>
+    </div>
+
+    <div class="button-container">
+        <button id="reset" class="reset-button">Reset Game</button>
+        <button id="play-again" class="play-again-button" style="display: none;">Play Again</button>
+    </div>
+
+    <audio id="click-sound" src="click-21156.mp3"></audio>
+    <audio id="win-sound" src="victorymale-version-230553.mp3"></audio>
+    <audio id="lose-sound" src="murubbi.mp3"></audio>
+    <audio id="draw-sound" src="game-bonus-144751.mp3"></audio>
+    <audio id="background-sound" src="game-music-loop-7-145285.mp3" loop></audio>
+
+    <script src="RockPaper.js"></script>
+</body>
+</html>
